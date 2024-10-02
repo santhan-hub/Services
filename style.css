@@ -1,5 +1,4 @@
 /* google fonts link */
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
@@ -17,14 +16,17 @@
   height: 200px;
   width: 100%;
 }
+
 .card {
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
 }
+
 .card:hover {
   color: white;
 }
+
 .card::before {
   content: "";
   position: absolute;
@@ -36,14 +38,20 @@
   transition: 0.5s;
   z-index: -1;
 }
+
 .card:hover::before {
   left: 0%;
   color: white;
 }
+
 .container-fluid {
   background-image: url("blob-scene-haikei.svg");
   background-position: center;
   background-size: cover;
+}
+/*santhan changed*/
+.container-fluid .h1 .theme-text {
+  text-align: 0;
 }
 
 /* Header section */
@@ -61,8 +69,8 @@
 }
 
 .logo img {
-  margin-left: 15px;
-  width: 200px;
+  margin-left: 50px;
+  width: 150px;
   height: auto;
 }
 
@@ -82,31 +90,28 @@
   color: #f49200;
 }
 
-.container {
-  padding: 50px 20px;
-  position: relative;
-  top: 25px;
-  text-align: left;
-  left: -25%;
-  width: 42%;
+/* Main content section with text and image carousel */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
 }
 
-.container h1 {
-  text-align: start;
+.content-text {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.content-text h1 {
   font-size: 50px;
   font-weight: bold;
   color: #474af0;
-  margin-top: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
-.container p {
-  text-align: start;
+.content-text p {
   font-size: 20px;
-  margin: 20px auto;
-  max-width: 700px;
-  font-family: "Nunito", sans-serif;
+  margin-top: 20px;
 }
 
 .button {
@@ -120,29 +125,24 @@
   margin-top: 20px;
 }
 
-.image-wrapper {
-  display: flex;
-  justify-content: Right;
-  align-items: right;
-  margin-top: 50px;
-  flex-wrap: wrap;
+.button:hover {
+  color: #f49200;
+}
+/* Carousel styles */
+.carousel {
+  flex: 1;
+  max-width: 550px; /* Adjust this for larger images */
+  height: 400px; /* Adjust this for larger images */
 }
 
-.image-wrapper img {
-  width: 200px;
-  height: auto;
-  margin: 20px;
+.carousel-inner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-top: -70px;
 }
 
-.right-content {
-  position: relative;
-}
-
-.right-content img {
-  width: 300px;
-  height: auto;
-}
-
+/* Floating elements */
 .floating-elements img {
   width: 600px;
   border-radius: 0px;
@@ -167,7 +167,22 @@
   bottom: -20px;
 }
 
+/* Responsive layout */
 @media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .carousel {
+    max-width: 100%;
+    height: 300px; /* Adjust for smaller screens */
+  }
+
   .container h1 {
     font-size: 32px;
   }
@@ -197,13 +212,191 @@
     margin-bottom: 10px;
   }
 }
+
 .Services h1 {
   text-align: start;
   font-size: 48px;
   font-weight: bold;
   color: #f49200;
 }
-.Software Development .img {
+
+.Software-Development .img {
   width: 300px;
   height: auto;
+}
+
+/* Our Story Section */
+.our-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.story-image {
+  flex: 1;
+  max-width: 40%; /* Adjusts the width of the image */
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+.story-text {
+  flex: 1;
+  padding-left: 100px; /* Adds space between the image and the text */
+}
+.story-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: -150px;
+  margin-left: 200px;
+}
+
+.story-text .h1 .theme-text {
+  font-size: 60px;
+  font-weight: bold;
+  color: #474af0;
+  margin-top: -150px;
+  margin-left: 200px;
+}
+
+.story-text p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .our-story {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-text {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .story-image {
+    max-width: 100%;
+  }
+}
+/* Contact Us Section */
+/* Contact Us Section */
+
+#contact {
+  background-color: #50bcca; /* Example: Light blue background */
+  padding: 50px 20px;
+}
+#contact h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #474af0;
+  margin-bottom: 30px;
+}
+#contact .theme-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+#contact h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000000;
+  text-align: start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Flexbox layout for each column to align icon and text */
+#contact .row .col-md-3 {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Flexbox layout for Reach Out to Us rows */
+#contact .row img {
+  margin-right: 15px; /* Adds space between icon and text */
+}
+
+#contact .row p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Styling for Services list */
+#contact ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+#contact ul li {
+  font-size: 18px;
+  margin-bottom: 10px; /* Space between services */
+}
+
+/* Useful Links */
+.useful-links {
+  padding: 0;
+}
+.services-links a {
+  text-decoration: none;
+  color: #474af0; /* Link color */
+  font-size: 18px;
+}
+.useful-links li {
+  margin-bottom: 10px; /* Space between links */
+}
+
+.useful-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #474af0; /* Link color */
+  font-size: 18px;
+}
+
+.useful-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.services-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/* Form styling */
+#contact form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+}
+
+#contact .form-label {
+  margin-bottom: 5px;
+}
+
+#contact .contact-Number {
+  height: 10px;
+}
+
+#contact .Note {
+  height: 0px;
+}
+
+#contact .form-control {
+  margin-bottom: 20px; /* Space between form fields */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #contact .row .col-md-3 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px; /* Space between columns */
+  }
+
+  #contact .row img {
+    margin-bottom: 10px; /* Space below the icons */
+  }
 }
