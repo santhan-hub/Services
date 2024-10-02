@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <title>Softbug</title>
+    <title>Softbugg</title>
   </head>
 
   <body>
@@ -27,24 +27,57 @@
         <img src="images/SB (1).png" alt="Logo" />
       </div>
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#Home">Home</a>
+        <a href="#our-story">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact Us</a>
       </nav>
     </div>
 
-    <div class="container">
-      <h1>Unleashing Innovation Through Development and Testing<br /></h1>
-      <p>
-        we specialize in creating cutting-edge software solutions while ensuring
-        top-tier quality through rigorous testing. Our expert team is dedicated
-        to transforming your ideas into successful products.
-      </p>
-      <a href="#" class="button">Request A Demo</a>
-      <div class="floating-elements">
-        <img src="images/image2.svg" alt="Star Icon" />
+    <div class="container d-flex align-items-center justify-content-between content-wrapper" id="Home">
+      <!-- Text Section -->
+      <div class="content-text">
+        <h1>Unleashing Innovation Through Development <br/> and Testing</h1>
+        <p>
+          We specialize in creating cutting-edge software solutions while <br/>ensuring top-tier quality through rigorous testing. Our expert <br/>team is dedicated to transforming your ideas into successful products.
+        </p>
+        <a href="#contact" class="button">Request A Demo</a>
       </div>
+      <!-- Image Carousel -->
+  <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/image2.svg" class="d-block w-100" alt="Image 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/image1.svg" class="d-block w-100" alt="Image 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/security.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/functional.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/mobileapp.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/web.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/compatability.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/Mobile_dev.svg" class="d-block w-100" alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="images/data_analist .svg" class="d-block w-100" alt="Image 3" />
+      </div>
+    </div>
+  </div>
+  
+</div>
+    </div>
       <div class="image-wrapper">
         <!-- Image on the left -->
         <div class="left-content"></div>
@@ -53,9 +86,25 @@
         <div class="right-content"></div>
       </div>
     </div>
-    <h1><br /></h1>
+
+
+ <!-- Our Story Section -->
+<div class="container-fluid our-story d-flex align-items-center" id="our-story">
+  <!-- Left Side: Image -->
+  <div class="story-image">
+    <img src="images/ourstorey1.svg" alt="Our Story Image" />
+  </div>
+
+  <!-- Right Side: Text Content -->
+  <div class="story-text">
+    <h1>Our <span class="theme-text">Story</span></h1>
+    <p>
+      At Softbugg, we’re a team of innovators and problem-solvers united by a passion for technology. Since our beginning, we’ve been on a mission to empower businesses with cutting-edge development and testing solutions. Fueled by quality and driven by creativity, we craft digital experiences that help our clients succeed in an ever-evolving digital world. Whether it’s building seamless software or ensuring flawless performance, Softbugg is your trusted partner in navigating the future of technology.
+    </p>
+  </div>
+</div>
     <!-- Servicess -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="services">
       <h1 class="text-center mt-1 display-3 fw-bold">
         Our <span class="theme-text">Testing </span><span>Services</span>
       </h1>
@@ -148,7 +197,7 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto">
           <!-- card starts here -->
           <div class="card shadow">
-            <img src="images/web.svg" alt="" class="card-img-top" />
+            <img src="images/regression.svg" alt="" class="card-img-top" />
             <div class="card-body">
               <h3 class="text-center">Regression Testing</h3>
               <hr class="mx-auto w-75" />
@@ -164,14 +213,12 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto">
           <!-- card starts here -->
           <div class="card shadow">
-            <img src="images/web.svg" alt="" class="card-img-top" />
+            <img src="images/UAT.svg" alt="" class="card-img-top" />
             <div class="card-body">
               <h3 class="text-center">UAT</h3>
               <hr class="mx-auto w-75" />
               <p>
-                Elevate real-world user satisfaction by delivering exceptional
-                experiences, ensuring seamless interaction, and refining
-                solutions to meet evolving needs and preferences.
+                Deliver exceptional experiences that ensure seamless interaction, consistently adapt, innovate, and meet evolving user needs and preferences.             
               </p>
             </div>
           </div>
@@ -180,7 +227,7 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto">
           <!-- card starts here -->
           <div class="card shadow">
-            <img src="images/web.svg" alt="" class="card-img-top" />
+            <img src="images/compatability.svg" alt="" class="card-img-top" />
             <div class="card-body">
               <h3 class="text-center">Compatibility Testing</h3>
               <hr class="mx-auto w-75" />
@@ -197,7 +244,7 @@
         <!-- col ends here -->
       </div>
 
-      <h1 class="text-center mt-1 display-3 fw-bold">
+      <h1 class="text-center mt-1 display-3 fw-bold" id="Development-services">
         Our <span class="theme-text">Development </span><span>Services</span>
       </h1>
       <hr class="mx-auto mb-5 w-25" />
@@ -205,14 +252,12 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto">
           <!-- card starts here -->
           <div class="card shadow">
-            <img src="images/web.svg" alt="" class="card-img-top" />
+            <img src="images/Mobile_dev.svg" alt="" class="card-img-top" />
             <div class="card-body">
-              <h3 class="text-center">Mobile App Development</h3>
+              <h3 class="text-center">App Development</h3>
               <hr class="mx-auto w-75" />
               <p>
-                Transform your ideas into engaging mobile experiences with our
-                custom Android and iOS app development services. We prioritize
-                user satisfaction and innovative design.
+                Transform your ideas into engaging mobile experiences with our custom Android and iOS app development services. We prioritize user satisfaction and innovative design.
               </p>
             </div>
           </div>
@@ -239,7 +284,7 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto">
           <!-- card starts here -->
           <div class="card shadow">
-            <img src="images/dm.svg" alt="" class="card-img-top" />
+            <img src="images/data_analist .svg" alt="" class="card-img-top" />
             <div class="card-body">
               <h3 class="text-center">Data and Analytics</h3>
               <hr class="mx-auto w-75" />
@@ -271,6 +316,88 @@
         </div>
 
         <!-- col ends here -->
+      </div>
+    </div>
+    <div id="contact" class="container-fluid bg-light py-0">
+      <h1 class="text-center mt-5 display-3 fw-bold">Contact <span class="theme-text">Us</span></h1>
+      <hr class="mx-auto mb-5 w-25" />
+    
+      <div class="row">
+        <!-- Column 1: Reach Out to Us -->
+        <div class="col-12 col-md-3">
+          <h4>Reach us</h4>
+          <div class="row mb-3">
+            <div class="col-12 d-flex align-items-start">
+              <img src="images/location.svg" alt="Address" width="35px" height="45px" class="me-3">
+              <div>
+                <h5>Address:</h5>
+                <p>Gandhi street Westmambalem, Chennai<br/>Pincode: 600034</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 d-flex align-items-start">
+              <img src="images/email.svg" alt="Email" width="35px" height="45px" class="me-3">
+              <div>
+                <h5>Email:</h5>
+                <p>contact@softbugg.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 d-flex align-items-start">
+              <img src="images/phone.svg" alt="Phone" width="35px" height="45px" class="me-3">
+              <div>
+                <h5>Phone:</h5>
+                <p>+123-456-7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Column 2: Services -->
+        <div class="col-12 col-md-3">
+          <h4>Services</h4>
+          <ul class ="services-links">
+            <li><a href="#services">Testing Services</a></li>
+            <li><a href="#Development-services">Development Services</a></li>
+          </ul>
+        </div>
+    <!-- Column 4: Useful Links -->
+    <div class="col-12 col-md-3">
+      <h4>Useful Links</h4>
+      <ul class="useful-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#our-story">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+        <!-- Column 3: Book a Demo Form -->
+        <div class="col-12 col-md-3">
+          <h4>Book a Demo</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" id="contact-Number" placeholder="Enter your contact number" required>
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Type your requirements</label>
+              <input type="text" class="form-control" id="Note" placeholder="Enter your requirements" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+    
+        
       </div>
     </div>
 
