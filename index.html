@@ -374,28 +374,30 @@
       </ul>
     </div>
         <!-- Column 3: Book a Demo Form -->
-        <div class="col-12 col-md-3">
-          <h4>Book a Demo</h4>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-              <label for="contact" class="form-label">Contact Number</label>
-              <input type="tel" class="form-control" id="contact-Number" placeholder="Enter your contact number" required>
-            </div>
-            <div class="mb-3">
-              <label for="contact" class="form-label">Type your requirements</label>
-              <input type="text" class="form-control" id="Note" placeholder="Enter your requirements" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
+<div class="col-12 col-md-3">
+  <h4>Book a Demo</h4>
+  <form id="demoForm" action="https://api.web3forms.com/submit" method="POST">
+    <div class="mb-3">
+      <input type="hidden" name="access_key" value="eb4d2b8e-2645-4da0-9e9e-00adb3353e66">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="mb-3">
+      <label for="contact" class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" id="contact-Number" name="contactNumber" placeholder="Enter your contact number" required>
+    </div>
+    <div class="mb-3">
+      <label for="requirements" class="form-label">Type your requirements</label>
+      <textarea type="text" class="form-control" id="Note" name="requirements" placeholder="Enter your requirements" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
     
         
       </div>
@@ -407,5 +409,29 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Add this JavaScript code to handle form reset after submission -->
+<script>
+  document.getElementById('demoForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Submit the form using fetch API
+    fetch(this.action, {
+      method: this.method,
+      body: new FormData(this),
+    }).then(response => response.json())
+      .then(result => {
+        if (result.success) {
+          alert("Form submitted successfully!"); // Show a success message
+          this.reset(); // Reset the form after successful submission
+        } else {
+          alert("There was an error submitting the form. Please try again.");
+        }
+      }).catch(error => {
+        alert("There was an error submitting the form. Please try again.");
+        console.error("Error:", error);
+      });
+  });
+</script>
   </body>
 </html>
