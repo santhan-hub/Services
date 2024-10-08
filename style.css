@@ -21,6 +21,7 @@
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
+  height: 440px;
 }
 
 .card:hover {
@@ -95,7 +96,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 .content-text {
@@ -179,8 +180,13 @@
   .content-text {
     margin-right: 0;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
+  .card-space {
+    gap: 16px;
+  }
   .carousel {
     max-width: 100%;
     height: 300px; /* Adjust for smaller screens */
@@ -233,7 +239,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 30px 60px 0px 60px;
 }
 
 .story-image {
@@ -273,10 +279,24 @@
 }
 
 /* Responsive Layout */
-@media (max-width: 800px) {
+@media (max-width: 740px) {
   .our-story {
     flex-direction: column;
     text-align: center;
+  }
+  .story-text h1 {
+    margin-left: 0px;
+    font-size: 40px;
+    margin-top: -80px;
+  }
+  .links-services {
+    display: none !important;
+  }
+  .w-100 {
+    width: 100%;
+  }
+  .form {
+    align-items: center;
   }
 
   .story-text {
@@ -284,6 +304,12 @@
     align-items: center;
     padding-left: 0;
     margin-top: 30px;
+  }
+  .logo img {
+    margin-left: 0px;
+  }
+  .content-text h1 {
+    text-align: center;
   }
 
   .story-image {
@@ -302,7 +328,7 @@
   font-size: 40px;
   font-weight: bold;
   color: #474af0;
-  margin-bottom: 30px;
+  padding-top: 32px;
 }
 #contact .theme-text {
   font-size: 40px;
@@ -401,7 +427,6 @@
 }
 
 #contact .form-control::placeholder {
-  color: #474af0;
 }
 
 #contact .btn-primary {
@@ -420,8 +445,13 @@
 @media (max-width: 768px) {
   #contact .row .col-md-3 {
     flex-direction: column;
-    align-items: center;
     margin-bottom: 10px; /* Space between columns */
+  }
+  #contact h4 {
+    text-align: center;
+  }
+  .links-services {
+    display: none;
   }
 
   @media (max-width: 768) {
@@ -434,4 +464,16 @@
   #contact .row img {
     margin-bottom: 10px; /* Space below the icons */
   }
+}
+.our-service {
+  padding: 30px 30px 30px 30px;
+}
+
+footer {
+  margin-top: 16px;
+  background-color: #2a1e1e;
+  color: #fbfbfb;
+  padding: 8px;
+  text-align: center;
+  width: 100vw;
 }
